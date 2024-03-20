@@ -206,6 +206,12 @@ class Weather extends React.Component {
 
           <div className="city" style={cityStyle} >
             <div className="title">
+              <ReactAnimatedWeather
+                icon={this.state.icon}
+                color={defaults.color}
+                size={defaults.size}
+                animate={defaults.animate}
+              />
               <h2>{this.state.city}</h2>
               <h3>{this.state.country}</h3>
             </div>
@@ -231,8 +237,8 @@ class Weather extends React.Component {
                 <p>
                   {this.state.temperatureC}°<span>C</span>
                 </p>
-                {/* <span className="slash">/</span>
-                {this.state.temperatureF} &deg;F */}
+                <span className="slash">/</span>
+                {this.state.temperatureF} &deg;F
               </div>
             </div>
           </div>
